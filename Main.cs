@@ -53,14 +53,13 @@ namespace RiftSharp_Launcher
             else
             {
                 MessageBox.Show("Username and Password could not be empty.");
-                return;
             }
         }
-        internal partial class MainExe
+        internal class MainExe
         {
             /// The main entry point for the application.
             [STAThread()]
-            internal static void Main(string[] Args)
+            internal static void Main()
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
