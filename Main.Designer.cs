@@ -100,7 +100,9 @@ namespace RiftSharp_Launcher
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this._btnLogin);
             this.Controls.Add(this.imgLogo);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Main";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -20,22 +20,22 @@ namespace RiftSharp_Launcher
                 return;
             }
 
-            if (!string.IsNullOrEmpty(txtUserName.Text) & !string.IsNullOrEmpty(txtPassword.Text))
+            if (!string.IsNullOrEmpty(txtUserName.Text) && !string.IsNullOrEmpty(txtPassword.Text))
             {
                 // Declare those variables!
                 string sFileName = Application.StartupPath + @"\wow.ses";
                 var myFileStream = new FileStream(sFileName, FileMode.Create, FileAccess.ReadWrite, FileShare.None);
 
-                // Create the stream writer
+                // Create the stream writer.
                 var myWriter = new StreamWriter(myFileStream);
 
-                // Write in what is in the text box
+                // Write in what is in the text box.
                 myWriter.Write(txtUserName.Text + "\r\n" + txtPassword.Text);
 
-                // Flush before we close
+                // Flush before we close.
                 myWriter.Flush();
 
-                // Close everything
+                // Close everything.
                 myWriter.Close();
                 myFileStream.Close();
                 var startInfo = new ProcessStartInfo(Application.StartupPath + @"\WoWClient.exe");
@@ -55,10 +55,9 @@ namespace RiftSharp_Launcher
                 MessageBox.Show("Username and Password could not be empty.");
             }
         }
-        internal class MainExe
+        internal static class MainExe
         {
-            /// The main entry point for the application.
-            [STAThread()]
+            // The main entry point for the application.
             internal static void Main()
             {
                 Application.EnableVisualStyles();
