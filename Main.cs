@@ -39,13 +39,21 @@ namespace RiftSharp_Launcher
                 myWriter.Close();
                 myFileStream.Close();
                 var startInfo = new ProcessStartInfo(Application.StartupPath + @"\WoWClient.exe");
-                if (chkboxWindowed.Checked)
+                if (chkboxWindowed.Checked && !chkboxOpenGL.Checked)
                 {
-                    startInfo.Arguments = "-uptodate -windowed -console";
+                    startInfo.Arguments = "-uptodate -windowed";
+                }
+                else if (chkboxOpenGL.Checked && !chkboxWindowed.Checked)
+                {
+                    startInfo.Arguments = "-opengl -uptodate";
+                }
+                else if (chkboxOpenGL.Checked && chkboxWindowed.Checked)
+                {
+                    startInfo.Arguments = "-opengl -uptodate -windowed";
                 }
                 else
                 {
-                    startInfo.Arguments = "-uptodate -console";
+                    startInfo.Arguments = "-uptodate";
                 }
 
                 Process.Start(startInfo);
@@ -64,6 +72,16 @@ namespace RiftSharp_Launcher
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new Main());
             }
+        }
+
+        private void chkboxOpenGL_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkboxWindowed_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

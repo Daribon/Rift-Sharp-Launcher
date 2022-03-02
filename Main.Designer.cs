@@ -17,6 +17,7 @@ namespace RiftSharp_Launcher
             this.Label2 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.chkboxWindowed = new System.Windows.Forms.CheckBox();
+            this.chkboxOpenGL = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,12 +88,27 @@ namespace RiftSharp_Launcher
             this.chkboxWindowed.TabIndex = 5;
             this.chkboxWindowed.Text = "Windowed";
             this.chkboxWindowed.UseVisualStyleBackColor = true;
+            this.chkboxWindowed.CheckedChanged += new System.EventHandler(this.chkboxWindowed_CheckedChanged);
+            // 
+            // chkboxOpenGL
+            // 
+            this.chkboxOpenGL.AutoSize = true;
+            this.chkboxOpenGL.Checked = true;
+            this.chkboxOpenGL.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkboxOpenGL.Location = new System.Drawing.Point(15, 191);
+            this.chkboxOpenGL.Name = "chkboxOpenGL";
+            this.chkboxOpenGL.Size = new System.Drawing.Size(77, 17);
+            this.chkboxOpenGL.TabIndex = 6;
+            this.chkboxOpenGL.Text = "OpenGL";
+            this.chkboxOpenGL.UseVisualStyleBackColor = true;
+            this.chkboxOpenGL.CheckedChanged += new System.EventHandler(this.chkboxOpenGL_CheckedChanged);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(220, 211);
+            this.Controls.Add(this.chkboxOpenGL);
             this.Controls.Add(this.chkboxWindowed);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.Label2);
@@ -100,7 +116,7 @@ namespace RiftSharp_Launcher
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this._btnLogin);
             this.Controls.Add(this.imgLogo);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Main";
@@ -145,5 +161,6 @@ namespace RiftSharp_Launcher
         internal Label Label2;
         internal TextBox txtPassword;
         internal CheckBox chkboxWindowed;
+        internal CheckBox chkboxOpenGL;
     }
 }
