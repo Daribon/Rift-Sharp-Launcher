@@ -3,7 +3,7 @@ Many thanks goes out to Novo for creating the original [Rift .NET Reborn Launche
 
 Compared to the old VB launcher the following changes has been done:
 * Converted entire project to C#.
-* Upgraded to .NET 5.0
+* Upgraded to .NET Framework 4.8
 * Removed encryption.
 * A lot of cleanup.
 
@@ -14,5 +14,5 @@ Visual Studio 2019
 To build the project just:
 
 ```
-Run buildnative_windows.bat
+Hit build in VS Studio
 ```
